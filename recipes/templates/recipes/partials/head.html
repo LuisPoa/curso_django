@@ -120,12 +120,12 @@
         }
 
         .search-form {
-            border: 0.2rem solid var(--color-primary-dark);
+            border: .2rem solid var(--color-primary-dark);
             max-width: 64rem;
             margin: 0 auto;
-            padding: 1rem;
-            border-radius: 1rem;
+            border-radius: .4rem;
             position: relative;
+            transition: all 300ms ease-in-out;
         }
 
         .search-input,
@@ -133,11 +133,13 @@
             border: none;
             background: none;
             outline: none;
+            padding: 1rem;
+            transition: all 300ms ease-in-out;
         }
 
         .search-input {
             width: 100%;
-            padding-right: 4rem;
+            padding-right: 3rem;
         }
 
         .search-button {
@@ -147,8 +149,47 @@
 
         }
 
+        .search-button:focus {
+            outline: 1px solid var(--color-primary);
+            background: rgba(0, 0, 0, .9);
+        }
+
         .search-form:focus-within {
             border-color: var(--color-primary);
+            background: var(--color-white);
+        }
+
+        .search-form:focus-within .search-button {
+            color: var(--color-primary);
+        }
+
+        .main-content {
+            padding-top: 0;
+        }
+
+        .main-content-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: var(--spacing-gutter-medium);
+        }
+
+        .recipe {
+            background: var(--color-white);
+            box-shadow: -10px 10px 15px rgba(0, 0, 0, .2);
+            transform: scale(1);
+            transition: all 300ms ease-in-out;
+        }
+
+        .recipe img {
+            max-width: 100%;
+        }
+
+        .recipe-list-item {
+            max-width: 64rem;
+        }
+
+        .recipe-list-item :hover {
+            transform: scale(1.02);
         }
     </style>
 </head>
